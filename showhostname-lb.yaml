@@ -4,10 +4,10 @@ kind: Service
 metadata:
   name: my-service
   labels:
-    app: dshowhostname
+    app: showhostname
 spec:
   selector:
-    app: dshowhostname
+    app: showhostname
   type: LoadBalancer
   ports:
   - nodePort: 31000
