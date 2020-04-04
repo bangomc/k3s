@@ -9,6 +9,8 @@ spec:
   selector:
     app: showhostname
   type: LoadBalancer
+  externalIPs:
+    - 192.168.0.55
   ports:
   - nodePort: 31000
     port: 80
