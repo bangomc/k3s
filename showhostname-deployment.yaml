@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: showhostname-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: showhostname
+  template:
+    metadata:
+      labels:
+        editor: vscode
+        app: showhostname
+    spec:
+      containers:
+      - name: showhostname
+        image: bangomc/showhostname:arm
+        ports:
+          - containerPort: 8080
