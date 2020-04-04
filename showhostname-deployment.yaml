@@ -18,3 +18,4 @@ spec:
         image: bangomc/showhostname:arm
         ports:
           - containerPort: 8080
+          - port: 8081

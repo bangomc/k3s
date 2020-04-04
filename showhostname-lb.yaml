@@ -1,0 +1,15 @@
+# Service - LoadBalancer
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: dshowhostname
+spec:
+  selector:
+    app: dshowhostname
+  type: LoadBalancer
+  ports:
+  - nodePort: 31000
+    port: 80
+    targetPort: 8081
